@@ -1,0 +1,54 @@
+/* Approche mobile-first : les règles CSS sont prévues par défaut pour le smartphone */
+/* Les autres media queries sont définies pour tablette et PC desktop */
+
+/*  Smartphone : écrans <= 480px
+    Tablette : écrans entre 480px et 960px
+    Desktop PC : écrans > 960px
+*/    
+
+body {
+	background:url(../images/bg_top.jpg) top repeat-x;
+}
+
+.entete {
+    background: url(../images/bg_top_img.jpg) top center no-repeat;
+}
+
+.entete header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu {
+    display: none;
+}
+
+.slider_bg {            /* Pour masquer le slider */
+    display:none;
+}
+
+footer {
+    background:url(../images/bg_bot.jpg) top center repeat
+}
+
+/* Media queries pour tablettes */
+
+@media screen and (min-width:480px) and (max-width:960px) {
+    #top_nav {
+        display: none;
+    }
+}
+
+/* Media queries pour desktop PC */
+
+@media screen and (min-width:960px) {
+    #top_nav {
+        display: none;
+    }
+
+    .slider_bg {
+        display: block;
+    }
+
+}
